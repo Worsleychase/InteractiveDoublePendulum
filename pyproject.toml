@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "CW-DoublePendulum"
-version = "0.1.0"
+version = "0.3.0"
 description = "A Python package that uses NumPy and Matplotlib to simulate an interactive double pendulum."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -26,4 +26,4 @@ dependencies = [
 Homepage = "https://github.com/Worsleychase/InteractiveDoublePendulum"
 
 [project.scripts]
-CW-DoublePendulum = "CWDoublePendulum.sim:runSim"
+CWDoublePendulum = "CWDoublePendulum.sim:runSim"
