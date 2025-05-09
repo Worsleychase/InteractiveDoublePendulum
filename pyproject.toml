@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}
 authors = [
-  { name = "Chase Worsley", email = "your_email@example.com" }
+  { name = "Chase Worsley", email = "worsleychase@gmail.com" }
 ]
 classifiers = [
   "Programming Language :: Python :: 3",
@@ -27,3 +27,9 @@ Homepage = "https://github.com/Worsleychase/InteractiveDoublePendulum"
 
 [project.scripts]
 CWDoublePendulum = "CWDoublePendulum.sim:runSim"
+
+[tool.setuptools]
+packages = ["CWDoublePendulum"]
+
+[tool.setuptools.package-data]
+doublependulum = ["testHash.txt"]

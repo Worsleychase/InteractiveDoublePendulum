@@ -9,6 +9,9 @@ def runSim():
     import time
     import csv
     import hashlib
+    import importlib.resources
+    import CWDoublePendulum
+
 
     # Initial parameters (all can be modified with sliders)
     l1 = 1.0
@@ -374,7 +377,8 @@ def runSim():
         result = np.round(state, decimals=6)
         resultStr = ','.join(map(str, result))
         hashDigest = hashlib.sha256(resultStr.encode()).hexdigest()
-        testHash = np.loadtxt('testHash.txt', dtype=str)
+        with importlib.resources.files(CWDoublePendulum).joinpath("testHash.txt").open("r") as f:
+            testHash = f.read().strip()
         if hashDigest != testHash:
             print("Test failed! Please re-download source code")
         else:
@@ -384,5 +388,3 @@ def runSim():
     testButton.on_clicked(runVerification)
 
     plt.show()
-
-runSim()
