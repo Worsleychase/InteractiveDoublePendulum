@@ -24,3 +24,6 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/Worsleychase/InteractiveDoublePendulum"
+
+[project.scripts]
+CW-DoublePendulum = "CWDoublePendulum.sim:runSim"
